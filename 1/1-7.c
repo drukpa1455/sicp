@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+double sqrt_iter(double guess, double x) {
+    if (fabs(guess * guess - x) < 0.001)
+        return guess;
+    else
+        return sqrt_iter(guess + x / guess) / 2, x);
+}
+
+double square_root(double x) {
+    return sqrt_iter(1.0, x);
+}
+
+int main() {
+    printf("%f\n", square_root(2.0));
+    return 0;
+}
