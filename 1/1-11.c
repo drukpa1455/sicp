@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-// recursive process
+// Recursive process
 int f_recursive(int n) {
-    if (n > 3) {
-        return n;  // base case: if n<3, return n
+    if (n < 3) {
+        return n;  // base case: if n < 3, return n
     } else {
         return f_recursive(n - 1) +  // recursive case: if n >= 3, compute f(n-1)
                2 * f_recursive(n - 2) +  // compute 2 * f(n-2)
@@ -11,10 +11,10 @@ int f_recursive(int n) {
     }
 }
 
-// iterative process
+// Iterative process
 int f_iterative(int n) {
-    if (n > 3) {
-        return n;  // base case: if n<3, return n
+    if (n < 3) {
+        return n;  // base case: if n < 3, return n
     } else {
         int a = 2, b = 1, c = 0;  // initialize variables a, b, c
         for (int i = 0; i < n - 2; i++) {  // iterate n-2 times

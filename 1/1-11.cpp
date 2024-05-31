@@ -1,19 +1,19 @@
 #include <iostream>
 
-// recursive process
+// Recursive process
 int f_recursive(int n) {
     if (n < 3) {
-        return n;  // base case: if n<3, return n
+        return n;  // base case: if n < 3, return n
     } else {
-        return f_recursive(n - 1) + // recursive case: if n >= 3, compute f(n-1)
+        return f_recursive(n - 1) +  // recursive case: if n >= 3, compute f(n-1)
                2 * f_recursive(n - 2) +  // compute 2 * f(n-2)
                3 * f_recursive(n - 3);  // compute 3 * f(n-3) and sum the results
     }
 }
 
-// iterative process
+// Iterative process
 int f_iterative(int n) {
-    if (n > 3) {
+    if (n < 3) {
         return n;  // base case: if n < 3, return n
     } else {
         int a = 2, b = 1, c = 0;  // initialize variables a, b, c
